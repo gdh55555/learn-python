@@ -26,8 +26,11 @@ def redis_init():
     return r;
 
 def push_to_redis(key_list):
+    r = redis_init()
     for key in key_list:
-        redis_init().lpush('key', key)
+        r.lpush('key', key)
+    r.save()
+
 
 def get_from_redis():
     key_list = redis_init().lrange('key', 0, -1)
