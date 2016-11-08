@@ -67,7 +67,7 @@ def download_imgs(info):
         return
     print("创建相册：" + t + " " + l)
     try:
-        os.mkdir(t)
+        os.mkdir("image/"+ t)
     except Exception as e:
         print("文件夹：" + t +"，已经存在")
 
@@ -110,7 +110,7 @@ def download_img_from_page(t, page_url):
 def save_file(d, filename, img_url):
     print(img_url + "=============")
     img = requests.get(img_url)
-    name = str(d + "/" + filename)
+    name = str("image/" + d + "/" + filename)
     with open(name, "wb") as code:
         code.write(img.content)
 
