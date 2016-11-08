@@ -146,10 +146,10 @@ def get_dir_img_page_url(l, dir_soup):
     return url_list
 
 if __name__ == '__main__':
-    parser = argparse.AugumentParser()
+    parser = argparse.ArgumentParser()
     parser.add_argument("echo")
     args = parser.parse_args()
-    uil = str(args.echo)
+    url = str(args.echo)
     print("开始解析：" + url)
 
     html = get_html(url)
