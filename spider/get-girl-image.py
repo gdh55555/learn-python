@@ -24,7 +24,8 @@ def get_html(url_address):
     :param url_address: 请求的网页地址
     :return: html
     """
-    headers = {'ser-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:31.0) Gecko/20100101 Firefox/31.0'}
+    #headers = {'User-Agent':'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:23.0) Gecko/20100101 Firefox/23.0'}
+    headers = {'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:31.0) Gecko/20100101 Firefox/31.0'}
     req = urllib.request.Request(url=url_address, headers=headers)
     return urllib.request.urlopen(req)
 
