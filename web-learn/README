@@ -1,0 +1,9 @@
+#before work
+python3
+异步框架aiohttp
+pip3 install aiohttp
+前端模板引擎
+pip3 install jinja2
+mysql
+异步驱动程序aiomysql
+pip3 install aiomysql
