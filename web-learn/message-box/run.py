@@ -1,11 +1,11 @@
-#!/usr/bin/python  
-#-*- coding:utf-8 -*-  
+#!/usr/bin/python
+#-*- coding:utf-8 -*-
 __author__ = "goodhe"
 
 #=====================================
 
 #File Name: run.py
-#Mail: gdhe55555@gmail.com  
+#Mail: gdhe55555@gmail.com
 #Created Time: 2016-11-18 10:04:54
 
 #=====================================
@@ -24,9 +24,11 @@ Since it's a small application, I have not use SQLAlchemy and wtf.
 import os
 import sqlite3
 from datetime import datetime
-from flask import Flask, g, request, render_template, flash
+from flask import Flask, g, request, render_template, flash, current_app
 
 app = Flask(__name__)
+#with app.app_context():
+#    print(current_app.name)
 
 #configuration
 app.config.update(dict(
@@ -93,6 +95,6 @@ def index():
 
 if __name__ == "__main__":
     import doctest
-    doctest.testmod()
+    #doctest.testmod()
     app.run(debug=True)
 
